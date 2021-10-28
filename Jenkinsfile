@@ -27,5 +27,11 @@ pipeline {
       }
     }
 
+    stage('post') {
+      steps {
+        sh './scripts/clean.sh'
+      }
+    }
+
   }
 }
