@@ -30,6 +30,8 @@ pipeline {
     stage('post') {
       steps {
         sh 'sh ./scripts/clean.sh'
+        input 'Finished using the web site? (Click "Proceed" to continue)'
+        sh 'sh \'./scripts/kill.sh\''
       }
     }
 
