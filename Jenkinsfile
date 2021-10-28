@@ -5,9 +5,9 @@ pipeline {
       steps {
         sh 'echo "Hello World"'
         sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
+            echo "Multiline shell steps works too"
+            ls -lah
+        '''
       }
     }
 
@@ -19,7 +19,11 @@ pipeline {
 
     stage('deliver') {
       steps {
-        sh './scripts/deliver.sh'
+        sh 'id'
+        sh 'ls -lart'
+        sh 'cd ./scripts'
+        sh 'ls -lart'
+        sh 'sh ./scripts/deliver.sh'
       }
     }
 
